@@ -1,0 +1,1 @@
+# HMM-Driven-Regime-Aware-Quality-Allocation-in-U.S.-Technology-Equities
