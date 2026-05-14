@@ -11,9 +11,7 @@ As part of the Exploratory Data Analysis, statistical testing, distribution anal
 
 ## **2. Model Development, Regime Detection, and Evaluation (THE_ENGINE)**
 
-The second notebook contains the complete implementation of the strategy, including factor construction, regime detection, portfolio construction, and evaluation.
-
-It uses the structured market dataset (`market_data_2007_2026.csv`) together with the `Thesis_Fundamentals.csv`. Training, validation, and holdout periods are strictly separated (2007–2017, 2018–2024, and 2025–2026) to ensure robust out-of-sample testing.
+The second notebook contains the complete implementation of the strategy, including factor construction, regime detection, portfolio construction, and evaluation. It uses the structured market dataset (`market_data_2007_2026.csv`) together with the `Thesis_Fundamentals.csv` and prepares the separated Training, validation, and holdout periods (2007–2017, 2018–2024, and 2025–2026) 
 
 Fundamental data is aligned with market returns using a backward-looking `merge_asof` procedure with a 60-day reporting lag to eliminate look-ahead bias. From the aligned financial statements, two core quality factors are constructed: Return on Equity (ROE) calculated as *Net Income divided by Total Equity*, and Free Cash Flow Margin (FCF Margin) calculated as *(Operating Cash Flow + Capital Expenditures) divided by Revenue*. These ratios are computed in a time-consistent manner using only information available at each market date. As an intermediate auditing step, the aligned dataset is saved as `aligned_fundamentals_debug.csv`, serving as a verification snapshot of the alignment and transformation logic.
 
